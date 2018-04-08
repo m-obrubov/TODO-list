@@ -5,12 +5,10 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.Collection;
-import java.util.Collections;
 
 public class DAO {
     private static final String HOST = "localhost";
-    private static final String DATABASE = "task";
+    private static final String DATABASE = "todo";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "1997";
     private Connection connection;

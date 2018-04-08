@@ -6,6 +6,9 @@ public class Task {
     private String description;//описание
     private boolean done;//выполнение
 
+    public Task() {
+    }
+
     public Task(String description) {
         this.description = description;
         this.done = false;
