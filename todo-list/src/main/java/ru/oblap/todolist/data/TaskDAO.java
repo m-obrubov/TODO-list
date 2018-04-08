@@ -1,5 +1,6 @@
 package ru.oblap.todolist.data;
 
-public class TaskDAO {
+public class TaskDAO extends DAO{
+
 
 }
