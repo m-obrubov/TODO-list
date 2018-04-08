@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import ru.oblap.todolist.data.TaskDAO;
 import ru.oblap.todolist.model.Task;
 
 import java.util.List;
@@ -13,20 +14,17 @@ import java.util.List;
 public class TaskController {
 
     @RequestMapping(value = "/add", method = RequestMethod.PUT)
-    public Task add(@RequestParam("task") Task task) {
-
-        return null;
+    public Boolean add(@RequestParam("task") Task task) {
+        return new TaskDAO().create(task);
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Task> getTasks() {
-
-        return null;
+        return new TaskDAO().getAll();
     }
 
     @RequestMapping(value = "/done", method = RequestMethod.PUT)
-    public boolean isDone() {
-
-        return false;
+    public boolean isDone(@RequestParam("task") Task task) {
+        return new TaskDAO().updateDone(task);
     }
 }

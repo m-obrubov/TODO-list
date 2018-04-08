@@ -45,7 +45,7 @@ public class TaskDAO extends DAO{
     public boolean create(Task task) {
         boolean result = false;
         Connection connection = openConnection();
-        String sql = "INSERT INTO user(description, done) value (?, ?);";
+        String sql = "INSERT INTO task(description, done) value (?, ?);";
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
             stmt.setString(1, task.getDescription());
             stmt.setBoolean(2, task.isDone());
