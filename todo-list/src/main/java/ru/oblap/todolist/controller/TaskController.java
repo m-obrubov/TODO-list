@@ -10,7 +10,7 @@ import ru.oblap.todolist.model.Task;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/task")
 public class TaskController {
 
     @RequestMapping(value = "/add", method = RequestMethod.PUT)
