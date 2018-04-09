@@ -1,10 +1,14 @@
 <ion-header>
   <ion-navbar>
-      <ion-title>Ionic Task List</ion-title>
+      <ion-title>Ionic Task Manager</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+  <ion-fab top right>
+    <button ion-fab mini (click)="presentAddModal()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
   <ion-list>
       <ion-item>
           <ion-label>Task 1 </ion-label>

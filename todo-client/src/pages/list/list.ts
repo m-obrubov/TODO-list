@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ModalController } from 'ionic-angular'; 
+import { AddPage } from '../add/add';
 
 @Component({
   selector: 'page-list',
@@ -7,8 +8,13 @@ import { NavController } from 'ionic-angular';
 })
 export class ListPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public modalCtrl: ModalController) {
 
+  }
+
+  public presentAddModal() {
+    let addModal = this.modalCtrl.create(AddPage);
+    addModal.present();
   }
 
 }
